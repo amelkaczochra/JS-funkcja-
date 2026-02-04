@@ -1,9 +1,22 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8"/>
+        <script type="text/javascript">
+            function Sprawdź ()
+            {
+                var liczba = document.getElementById("pole").value;
+                if (liczba=="") document.getElementById("wynik").innerHTML = "wpisz coś";
+                else if (liczba>0) document.getElementById("wynik").innerHTML = "Liczba jest dodatnia";
+                else if (liczba<0) document.getElementById("wynik").innerHTML = "Liczba jest ujemna";
+                else if (liczba==0) document.getElementById("wynik").innerHTML = "Liczba jest zerem";
+                else  document.getElementById("wynik").innerHTML = "To nie jest liczba";
+            }
+        </script>
     </head>
     <body>
-        <input type="text"/>
-        <
+        <input type="text" id="pole"/>
+        <input type="submit" value="Sprawdź" onclick="Sprawdź()"/>
+
+        <div id="wynik"></div>
     </body>
 </html>
